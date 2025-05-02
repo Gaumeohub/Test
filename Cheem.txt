@@ -102,7 +102,7 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-     Shop = Window:AddTab({ Title = "Tab Shop", Icon = "" }),
+     Info = Window:AddTab({ Title = "Tab Information", Icon = "" }),
     STSV = Window:AddTab({ Title = "Tab Status And Server", Icon = "" }),
     Player = Window:AddTab({ Title = "Tab Local Player", Icon = "" }),
     STFarm = Window:AddTab({ Title = "Setting Farm", Icon = "" }),
@@ -119,6 +119,27 @@ local Tabs = {
     ESP = Window:AddTab({ Title = "Tab ESP", Icon = "" }),
     PVP = Window:AddTab({ Title = "Tab PVP", Icon = "" }),
 }
+Tabs.Info:AddSeperator({
+        Title = "Information",
+        Description = "",
+        Callback = function()
+        --- ThÃ´ng Tin
+NguyenTien:AddSeperator("Information Developer")
+NguyenTien:AddLabel("Owner: Hoàng Thanh Thản")
+NguyenTien:AddLabel("Support Code: Thản Tự Làm")
+NguyenTien:AddLabel("Ui: Thản Tìm tòi")
+NguyenTien:AddLabel("Cảm Ơn Bạn Đã Dùng Script Premium Này!")
+
+NguyenTien:AddSeperator("Social Network")
+NguyenTien:AddButton("Discord Sever",function()
+setclipboard("https://discord.gg/DHBPF6Ma6Y")
+Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
+end)
+NguyenTien:AddButton("YouTube Official",function()
+setclipboard("https://youtube.com/@thanrealroblox?si=vGbpmKu_37elqIhj")
+Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
+end)
+})
 
 Tabs.Shop:AddButton({
         Title = "Redeem Code",
