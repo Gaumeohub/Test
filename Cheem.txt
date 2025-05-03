@@ -119,27 +119,6 @@ local Tabs = {
     ESP = Window:AddTab({ Title = "Tab ESP", Icon = "" }),
     PVP = Window:AddTab({ Title = "Tab PVP", Icon = "" }),
 }
-Tabs.Info:AddSeperator({
-        Title = "Information",
-        Description = "",
-        Callback = function()
-        --- ThÃ´ng Tin
-NguyenTien:AddSeperator("Information Developer")
-NguyenTien:AddLabel("Owner: Hoàng Thanh Thản")
-NguyenTien:AddLabel("Support Code: Thản Tự Làm")
-NguyenTien:AddLabel("Ui: Thản Tìm tòi")
-NguyenTien:AddLabel("Cảm Ơn Bạn Đã Dùng Script Premium Này!")
-
-NguyenTien:AddSeperator("Social Network")
-NguyenTien:AddButton("Discord Sever",function()
-setclipboard("https://discord.gg/DHBPF6Ma6Y")
-Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
-end)
-NguyenTien:AddButton("YouTube Official",function()
-setclipboard("https://youtube.com/@thanrealroblox?si=vGbpmKu_37elqIhj")
-Notif.New("Copying To Clipboard DoneðŸŽ‰", 3)
-end)
-})
 
 Tabs.Shop:AddButton({
         Title = "Redeem Code",
@@ -326,7 +305,22 @@ Tabs.Shop:AddButton({
 
     Tabs.STSV:AddParagraph({
         Title = "Time",
-        Content = "| Hour : 0 | Minute : 0 | Second : 0 |"
+        Content = "local ServerTime = Instance.new("TextLabel")
+    ServerTime.Name = "ServerTime"
+    ServerTime.Parent = Top
+    ServerTime.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    ServerTime.BackgroundTransparency = 1.000
+    ServerTime.Position = UDim2.new(0.68, 0,0.074, 0)
+    ServerTime.Size = UDim2.new(0, 225, 0, 25)
+    ServerTime.Font = Enum.Font.GothamSemibold
+    ServerTime.Text = ""
+    ServerTime.TextSize = 11.000
+    ServerTime.TextColor3 = Color3.fromRGB(255,255,255)
+    ServerTime.TextXAlignment = Enum.TextXAlignment.Left
+
+    function osfunc:Set(textadd)
+        ServerTime.Text = textadd
+    end"
 })
 
     Tabs.STSV:AddParagraph({
